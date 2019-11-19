@@ -1,0 +1,14 @@
+.row {
+    margin: 10px;
+    padding: 10px;
+}
+
+.col-md-11 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 400%;
+    color: black;
+}
+
+.col-md-1 {
+    float: left;
+}
