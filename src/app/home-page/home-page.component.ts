@@ -7,13 +7,13 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  constructor(){}
-  // constructor(config: NgbCarouselConfig) {  
-  //   config.interval = 2000;  
-  //   config.wrap = true;  
-  //   config.keyboard = false;  
-  //   config.pauseOnHover = false;  
-  // } 
+  // constructor(){}
+  constructor(config: NgbCarouselConfig) {  
+    config.interval = 2000;  
+    config.wrap = true;  
+    config.keyboard = false;  
+    config.pauseOnHover = false;  
+  } 
 
   ngOnInit() {
   }
