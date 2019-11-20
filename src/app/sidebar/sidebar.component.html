@@ -1,12 +1,75 @@
-<div class="d-flex" id="wrapper">
-    <div class="bg-light border-right" id="sidebar-wrapper">
-        <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action bg-light">About</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Sports</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Cultural</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Fixtures</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Feedback</a>
-        </div>
-    </div>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="div-topbar">
 </div>
+<span id="headTile">Foundation Day</span>
+<span (click)="login()"><button id="btnLog" class="btn btn-primary" routerLink='/login'>Login</button></span>
+<div class="sidenav" *ngIf='showsidebar'>
+    <div class="div-logo">
+        <a routerLink="/home" routerLinkActive="active"></a>
+    </div>
+    <!-- <div class="div-navicon" (click)="hidebar()">
+        <i class="fa fa-arrow-circle-left" style="font-size:26px ;color:white"></i>
+    </div> -->
+    <ul>
+        <div class="sidetab">
+            <li>
+                <div class="div-about">
+                    <nav>
+                        <a routerLink="/about" routerLinkActive="active">
+                            <i class="fa fa-users"></i>
+                            <span id='span-about'> About </span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="div-events">
+                    <nav>
+                        <a routerLink="/events" routerLinkActive="active">
+                            <i class="fa fa-calendar-o"></i>
+                            <span id='span-events'>Events </span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="div-sports">
+                    <nav>
+                        <a routerLink="/sports" routerLinkActive="active">
+                            <i class="fa fa-gamepad"></i>
+                            <span id='span-sports'> Sports  </span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="div-cultural">
+                    <nav>
+                        <a routerLink="/cultural" routerLinkActive="active">
+                            <i class="fa fa-music"></i>
+                            <span id='span-cultural'> Cultural </span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="div-fixtures">
+                    <nav>
+                        <a routerLink="/fixtures" routerLinkActive="active">
+                            <i class="fa fa-compress"></i>
+                            <span id='span-fixtures'> Fixtures</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="div-feedback">
+                    <nav>
+                        <a routerLink="/feedback" routerLinkActive="active">
+                            <i class="fa fa-comments"></i>
+                            <span id="span-feedback"> Feedback </span>
+                        </a>
+                    </nav>
+                </div>
+            </li>
+        </div>
+    </ul>
+</div>
+
+<!-- <div class="div-small-bar" *ngIf="showbar">
+    <div class="div-navicon" (click)="hidebar()">
+        <i id="i-smallbar" class="fa fa-arrow-circle-right" style="font-size:26px ;color:white"></i>
+    </div>
+</div> -->
