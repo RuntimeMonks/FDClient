@@ -9,6 +9,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -16,23 +17,24 @@ import { LoginComponent } from './login/login.component';
     HomePageComponent,
     HeaderComponent,
     SidebarComponent,
-    LoginComponent
+    LoginComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      {
-        path:'',
-        redirectTo: '/login',
-        pathMatch: 'full'
-      },
-      {path: 'login',
-      component: LoginComponent}
-    ])
+    ReactiveFormsModule
+    // RouterModule.forRoot([
+    //   {
+    //     path:'',
+    //     redirectTo: '/home',
+    //     pathMatch: 'full'
+    //   },
+    //   {path: 'home',
+    //   component: HomePageComponent}
+    // ])
   ],
   providers: [],
   bootstrap: [AppComponent]
