@@ -43,18 +43,18 @@
         </div>
         <div class="col-md-10">
             <div hidden style="text-align:inherit" id="createEvents">
-                <form>
+                <form (submit)="createEvent($event)">
                     <label>Event-Name:</label> <input class="form-control" type="text" id="genEvent" placeholder="Event name"> <label>Date: </label><input class="form-control" type="date" id="date" placeholder="Date"><br>
-                    <button class="btn btn-success" style="margin-right: 16px" (click)="createEvent()">Generate</button>
+                    <button class="btn btn-success" style="margin-right: 16px" type="submit">Generate</button>
                     <button class="btn1 btn btn-primary" style="margin-right: 16px" type="reset">Reset</button>
                     <br><br>
                 </form>
             </div>
 
             <div hidden style="text-align: justify" id="deleteEvents">
-                <form>
-                    <label>Event-Name:</label> <input class="form-control" type="text" id="delEvent" placeholder="Event name" size="20"><br>
-                    <button class="btn1 btn btn-danger" style="margin-right:16px" (click)="deleteEvent()">Remove</button>
+                <form (submit)="deleteEvent($event)">
+                    <label>Event-Name:</label> <input class="form-control" type="text" id="delEvent" placeholder="Event name"><br>
+                    <button class="btn1 btn btn-danger" style="margin-right:16px" type="submit">Remove</button>
                     <button class="btn1 btn btn-primary" style="margin-right: 16px" type="reset">Reset</button>
                     <br><br>
                 </form>
@@ -62,8 +62,14 @@
 
             <div hidden style="text-align:center; padding-top: 80px; padding-left: 110px;" id="manageEvents">
                 <form>
-                    <button class="btn btn-success" style="margin-right:16px" (click)="enableRegister()">Enable Register</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button class="btn btn-danger" style="margin-right: 16px" (click)="disableRegister()">Disable Register</button><br><br>
+                    <button class="btn btn-success" style="margin-right:16px" (click)="enableRegister($event)">Enable Register</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="btn btn-danger" style="margin-right: 16px" (click)="disableRegister($event)">Disable Register</button><br><br>
+                </form>
+            </div>
+
+            <div hidden style="text-align:center; padding-top: 80px; padding-left: 110px;" id="fixtureEvents">
+                <form>
+
                 </form>
             </div>
         </div>
