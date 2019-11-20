@@ -1,5 +1,6 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+// import { on } from 'cluster';
 
 @Component({
   selector: 'app-register',
@@ -8,15 +9,39 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+ 
+
+  constructor(  ) {
+    
+   }
 
   ngOnInit() {
+    
   }
 
-  onsubmit1(){
-  console.log("form")
+ 
 
-  // console.log(form1)
+onsubmit1(regform:NgForm): void {
+const uname=regform.value.fname
+const email=regform.value.mail
+const eid=regform.value.eid
+const gender=regform.value.gender
+const password=regform.value.pwd
 
+// console.log(uname + email + eid) 
+
+  console.log(regform.value)
+  console.log(regform.value.fname)
+  if(regform.value.pwd !== regform.value.cpwd)
+  {
+    alert("password is not matching")
   }
+
 }
+
+
+
+}
+
+
+

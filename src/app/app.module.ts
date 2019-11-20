@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { from } from 'rxjs';
 
+
 @NgModule({
   declarations: [
     AppComponent,

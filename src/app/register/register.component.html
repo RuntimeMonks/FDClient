@@ -1,65 +1,72 @@
-<div class="page-header">
-<p>register works!</p>
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container">
-<div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-          <h1>Register Here..!</h1>
-<form (ngSubmit)="onsubmit1(f)" #f="ngForm">
-
-<div class="form-group" >
-<label for="firstName">Employee Name</label>
-<input
- type="text"
- id="username"
- class="form-control" 
- ng-model="ename"
- required
- >
-</div>
-<div class="form-group">
-<label for="email">Email-id</label>
-<input
- type="email"
- id="mailid"
- class="form-control"
- ng-model="email"
- email>
-</div>
-<div class="form-group">
-<label for="firstName">Employee-id</label>
-<input
- type="number"
- class="form-control"
- ng-model="eid">
-</div>
-<div class="form-group">
-<label for="gender">Gender:</label><br>
- <input type="radio" value="male" ng-model="male" />Male
-<input type="radio"  value="Female"  ng-model="female" />Female
-</div>
-<div class="form-group">
-<label for="firstName">Password</label>
-<input
- type="password"
- id="password"
- class="form-control"
- ng-model="pwd" >
-</div>
-
-<div class="form-group">
-    <label for="firstName">Confirm Password</label>
+    <div class="jumbotron">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+              <h1>Register Here..!</h1>
+    <form #regform = "ngForm"  (ngSubmit)="onsubmit1(regform)">
+    
+    <div class="form-group" >
+    <label for="firstName">Employee Name</label>
+    <input id="name" class="form-control" name="fname" [(ngModel)] = "fname" required>
+    
+    </div>
+    <div class="form-group">
+    <label for="email">Email-id</label>
+    <input type="email" name="mail" id="mail" [(ngModel)]="mail" class="form-control" email required>
+    </div>
+    <div class="form-group">
+    <label for="firstName">Employee-id</label>
     <input
- type="password"
- id="cpassword"
- class="form-control"
- ng-model="cpwd" >
-</div>
- 
-<button class="btn btn-primary" type="submit" [disabled]="!f.valid" >Register </button>
-</form> 
-</div>
-</div>
-</div>
-
-
-
+     type="number"
+     class="form-control"
+     name="eid"
+     [(ngModel)]="eid"
+      required 
+     >
+    </div>
+    <div class="form-group">
+    <label for="gender">Gender:</label><br>
+     <input type="radio" value="male" name="gender" [(ngModel)]="gender" required />Male
+    <input type="radio"  value="Female" name="gender" [(ngModel)]="gender" required />Female
+    </div>
+    <div class="form-group">
+    <label for="firstName">Password</label>
+    <input
+     type="password"
+     id="password"
+     class="form-control"
+     name="pwd" 
+     [(ngModel)] = pwd
+      required 
+      >
+    </div>
+    
+    <div class="form-group">
+        <label for="firstName">Confirm Password</label>
+        <input
+     type="password"
+     name="cpwd"
+      id="cpassword"
+      required 
+      [(ngModel)] = cpwd
+     class="form-control"
+     >
+    </div>
+     
+     <button class="btn btn-primary"  type="submit"  >Register </button>
+    </form> 
+    </div>
+    </div>
+    </div>  
