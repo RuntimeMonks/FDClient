@@ -1,42 +1,42 @@
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</head>
-
-<body>
-    <div class="row">
-        <div class="col-md-1-8">
-            <div id="carouselId" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselId" data-slide-to="1"></li>
-                    <li data-target="#carouselId" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <img src="../../assets/images/img1.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../../assets/images/img2.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../../assets/images/img4.jpg" alt="Third slide">
-                    </div>
+<div class="row">
+    <div class="col-md-1-8">
+        <ngb-carousel>
+            <ng-template ngbSlide>
+                <img src="../../assets/images/img1.jpg" alt="Paris" height="">
+                <div class="carousel-caption">
+                    <h4 style="color: yellow">Paris</h4>
                 </div>
-                <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-1-4">
-            notification
+            </ng-template>
+            <ng-template ngbSlide>
+                <img src="../../assets/images/img3.jpg" alt="sunset">
+                <div class="carousel-caption">
+                    <h4 style="color: yellow">sunset</h4>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <img src="../../assets/images/img3.jpg" alt="River view">
+                <div class="carousel-caption">
+                    <h4 style="color: yellow">River view</h4>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <img src="../../assets/images/img4.jpg" alt="sunflowers">
+                <div class="carousel-caption">
+                    <h4 style="color: yellow">sunflowers</h4>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <img src="../../assets/images/img5.jpg" alt="boats">
+                <div class="carousel-caption">
+                    <h4 style="color: yellow">boats</h4>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+        <button id="btnReg" class="btn-primary" [disabled]="true" (click)="register()">Register</button>
+    </div>
+    <div class="col-md-1-4">
+        <div class="notification">
+
         </div>
     </div>
-</body>
+</div>

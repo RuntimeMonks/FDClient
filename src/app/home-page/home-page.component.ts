@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home-page',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-
-  constructor() { }
+  constructor(){}
+  // constructor(config: NgbCarouselConfig) {  
+  //   config.interval = 2000;  
+  //   config.wrap = true;  
+  //   config.keyboard = false;  
+  //   config.pauseOnHover = false;  
+  // } 
 
   ngOnInit() {
+  }
+
+  register(){
+    console.log("Hello")
   }
 
 }

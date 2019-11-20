@@ -12,3 +12,7 @@
 .col-md-1 {
     float: left;
 }
+
+#heading {
+    border: 5px slateblue;
+}

@@ -1,19 +1,20 @@
 #sidebar-wrapper {
-    min-height: 79vh;
-    margin-left: -15rem;
-    padding: 0.875rem 1.25rem;
+    position: relative;
+    height: 76vh;
+    /* padding: 0.875rem 1.25rem; */
     font-size: 1.2rem;
 }
 
 #sidebar-wrapper .list-group {
-    width: 15rem;
+    width: 18rem;
 }
 
-@media (min-width: 768px) {
+
+/* @media (min-width: 768px) {
     #sidebar-wrapper {
         margin-left: 0;
     }
     #wrapper.toggled #sidebar-wrapper {
         margin-left: -15rem;
     }
-}
+} */
