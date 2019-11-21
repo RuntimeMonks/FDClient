@@ -1,0 +1,18 @@
+.btn1 {
+    height: 2.5em;
+    width: 5em;
+    margin-left: 20px;
+}
+
+#createEvents,
+#deleteEvents {
+    position: fixed;
+    left: 30%;
+    top: 30%;
+}
+
+#manageEvents {
+    position: fixed;
+    left: 10%;
+    top: 20%;
+}

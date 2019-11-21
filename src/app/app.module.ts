@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SportsComponent } from './sports/sports.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SportsComponent } from './sports/sports.component';
     HomePageComponent,
     SidebarComponent,
     LoginComponent,
-    SportsComponent
+    SportsComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
