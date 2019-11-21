@@ -27,7 +27,11 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/angular/angular.min.js",
+              "node_modules/angular/angular.js",   
+              "node_modules/angular/angular.min.js.map"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,7 +97,11 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [ 
+              "node_modules/angular/angular.min.js",
+              "node_modules/angular/angular.js",
+              "node_modules/angular/angular.min.js.map"
+            ]
           }
         },
         "lint": {
