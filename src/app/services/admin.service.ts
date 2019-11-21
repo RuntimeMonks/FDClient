@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class AdminService {
 
   constructor() { }
-  getEventDetails(eventName, EventDate){
+  getEventDetails(eventName,eventType, EventDate){
     console.log(eventName,EventDate)
   }
 

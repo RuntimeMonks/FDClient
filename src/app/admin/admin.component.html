@@ -41,7 +41,18 @@
     <div class="col-md-10">
         <div hidden style="text-align:inherit" id="createEvents">
             <form (submit)="createEvent($event)">
-                <label>Event-Name:</label> <input class="form-control" type="text" id="genEvent" placeholder="Event name"> <label>Date: </label><input class="form-control" type="date" id="date" placeholder="Date"><br>
+                <label>Event-Name:</label> <input class="form-control" type="text" id="genEvent" placeholder="Event name"><br>
+                <label>Event-Type:</label><br>
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                        Sports <input type="radio" name="stype" id="genType" autocomplete="off" checked>
+                    </label>
+                    <label class="btn btn-success">
+                        Cultural <input type="radio" name="stype" id="genType" autocomplete="off">
+                    </label>
+                </div><br />
+                <!-- <label>Event-Type:</label> <input class="form-control" type="text" id="genType"> -->
+                <label>Date: </label><input class="form-control" type="date" id="date" placeholder="Date"><br>
                 <button class=" btn btn-success" style="margin-right: 16px" type="submit">Generate</button>
                 <button class=" btn btn-primary" style="margin-right: 16px" type="reset">Reset</button>
                 <br><br>
@@ -66,11 +77,21 @@
 
             </form>
         </div>
-
-        <div hidden style="text-align:center; padding-top: 80px; padding-left: 110px;" id="winnerRecords">
-            <ng-template *ngFor="let wl of winList">
-                <label>wl</label><input type="text" name="" id="">
-            </ng-template>
+        <div hidden style="padding-top: 80px; padding-left: 110px;" id="winnerRecords">
+            <span><h4>Pick the year <i class="fa fa-arrow-down"></i></h4>
+            <select id="lister" name="year">
+                <ng-container *ngFor="let yr of years">
+                    <option value={{yr}}>{{yr}}</option>
+                </ng-container>
+            </select>
+            <button class="btn-primary next" type="submit" (click)="yearPick()">Next</button></span>
+        </div>
+        <div hidden style="padding-top: 80px; padding-left: 110px;" id="winnerRecordsYear">
+            <span><h4>Enter the winner information <i class="fa fa-info-circle"></i></h4></span>
+            <ng-container id="lister" *ngFor="let wl of winList">
+                {{wl}}: <input type="text" class="form-control" name="winLists" id="winLists">
+            </ng-container><br />
+            <button class="btn-primary next" type="submit">Submit</button>
         </div>
     </div>
 </div>

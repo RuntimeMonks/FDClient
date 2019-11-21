@@ -18,3 +18,25 @@
     padding: 10px;
     margin: 40px;
 }
+
+#genType {
+    color: #58355E;
+}
+
+#winLists {
+    width: 10vw;
+    position: relative;
+    padding: 10px;
+}
+
+.next {
+    width: 100px;
+    margin: 20px;
+    padding: 6px 15px;
+    border-radius: 5px;
+}
+
+#lister {
+    width: 150px;
+    padding: 5px;
+}
