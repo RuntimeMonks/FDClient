@@ -44,6 +44,14 @@ export class AdminComponent implements OnInit {
     this.reset('manageEvents')
   }
 
+  addWinner(){
+    document.getElementById('winnerRecords').hidden=false;
+    this.reset('deleteEvents')
+    this.reset('createEvents')
+    this.reset('manageEvents')
+    this.reset('fixtureEvents')
+  }
+
   reset(disableId){
     document.getElementById(disableId).hidden=true;
   }
