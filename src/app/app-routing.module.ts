@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { SportsComponent } from './sports/sports.component';
 
 
 const routes: Routes = [
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path:'login' ,component:LoginComponent},
   { path:'', redirectTo: '/home', pathMatch: 'full' },
   { path:'sidebar' , component:SidebarComponent},
+  { path:'sports' , component:SportsComponent}
 ];
 
 @NgModule({

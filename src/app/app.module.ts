@@ -8,13 +8,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { SportsComponent } from './sports/sports.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     SidebarComponent,
-    LoginComponent
+    LoginComponent,
+    SportsComponent
   ],
   imports: [
     BrowserModule,
