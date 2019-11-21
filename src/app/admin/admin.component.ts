@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AdminService } from '../admin.service';
+import { AdminService } from '../services/admin.service';
 
 @Component({
   selector: 'app-admin',
@@ -11,6 +11,15 @@ export class AdminComponent implements OnInit {
 
   constructor(private router: Router,private Admin: AdminService) { }
 
+  winList={
+    'Cricket':'',
+    'Chess':'',
+    'Carrom':'',
+    'Badminton':'',
+    'Treasure Hunt':'',
+    'NFS':'',
+    'Counter Strike':''
+  };
   ngOnInit() {
   }
 
@@ -81,5 +90,7 @@ export class AdminComponent implements OnInit {
     const target = event.target;
     console.log("disableRegister");
   }
+
+
 
 }
