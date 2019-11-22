@@ -10,9 +10,7 @@ border:1px solid red;
 input.ng-valid {
     background-color:lightgray;
 }
-/* input.ng-invalid {
-    background-color:pink;
-} */
+
 .container
 {
     width: 50rem;

@@ -1,74 +1,54 @@
-
-
-<div   class="container">
-    <div   class="jumbotron " >
+<div class="container">
+  <div class="jumbotron ">
     <!-- <div class="row"> -->
-         <div class="col-xs-1 col-sm-1 col-md-7 col-sm-offset-4 col-md-offset-4"> 
-           
-            <h1 >Register Here..!</h1>
-    <form #regform = "ngForm" name="form1" (ngSubmit)="onsubmit1(regform)" novalidate >
-    
-    <div class="form-group" >
-    <label for="firstName">Employee Name</label>
-    <input id="name" class="form-control" placeholder="Enter Your full name" name="fname" [(ngModel)] = "fname" required>
-    <span ng-show="form1.fname.$touched && form1.fname.$error">The name is required.</span>
-    </div>
-    <div class="form-group">
-    <label for="email">Email-id</label>
-    <input type="email" placeholder="Enter Your Email here.." name="mail" id="mail" [(ngModel)]="mail" class="form-control" email required/>
-    <span ng-show="form.mail.$touched && form.mail.$error.required ">Email is required.</span>
-    </div>
-    <div class="form-group">
-    <label for="firstName">Employee-id</label>
-    <input
-     type="number"
-     placeholder="Enter Your Employee-Id"
-     class="form-control"
-     name="eid"
-     [(ngModel)]="eid"
-      required 
-     >
-   
-    
+    <div class="col-xs-1 col-sm-1 col-md-7 col-sm-offset-4 col-md-offset-4">
 
-     <span ng-show="form.eid.$touched && form.eid.$invalid">The name is required.</span>
-    </div>
-    <div class="form-group">
-    <label for="gender">Gender:</label><br>
-     <input type="radio" value="male" name="gender" [(ngModel)]="gender" required />Male
-    <input type="radio"  value="Female" name="gender" [(ngModel)]="gender" required />Female
-    </div>
-    <div class="form-group">
-    <label for="firstName">Password</label>
-    <input
-    placeholder="Enter Password"
-     type="password"
-     id="password"
-     class="form-control"
-     name="pwd" 
-     [(ngModel)] = pwd
-      required 
-      >
-    </div>
-    
-    <div class="form-group">
-        <label for="firstName">Confirm Password</label>
-        <input
-        placeholder="Re-Enter Password"
-     type="password"
-     name="cpwd"
-      id="cpassword"
-      required 
-      [(ngModel)] = cpwd
-     class="form-control"
-     >
-    </div>
-     
-     <button class="btn btn-primary"  type="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  
-     myForm.email.$dirty && myForm.email.$invalid" >Register </button>
-    
-    </form> 
-    </div>
-     </div> 
+      <h1>Register Here..!</h1>
+      <form #regform="ngForm" name="form1" (ngSubmit)="onsubmit1(regform)" novalidate>
 
-<!-- </div> -->
+        <div class="form-group">
+          <label for="firstName">Employee Name</label>
+          <input id="name" class="form-control" placeholder="Enter Your full name" name="fname" [(ngModel)]="fname"
+            required>
+          
+        </div>
+        <div class="form-group">
+          <label for="email">Email-id</label>
+          <input type="email" placeholder="Enter Your Email here.." name="mail" id="mail" [(ngModel)]="mail"
+            class="form-control" email required />
+          
+        </div>
+        <div class="form-group">
+          <label for="firstName">Employee-id</label>
+          <input type="number" placeholder="Enter Your Employee-Id" class="form-control" name="eid" [(ngModel)]="eid"
+            required>
+
+
+
+          
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender:</label><br>
+          <input type="radio" value="male" name="gender" [(ngModel)]="gender" required />Male
+          <input type="radio" value="Female" name="gender" [(ngModel)]="gender" required />Female
+        </div>
+        <div class="form-group">
+          <label for="firstName">Password</label>
+          <input placeholder="Enter Password" type="password" id="password" class="form-control" name="pwd"
+            [(ngModel)]=pwd required>
+        </div>
+
+        <div class="form-group">
+          <label for="firstName">Confirm Password</label>
+          <input placeholder="Re-Enter Password" type="password" name="cpwd" id="cpassword" required [(ngModel)]=cpwd
+            class="form-control">
+        </div>
+
+        <button class="btn btn-primary" type="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  
+myForm.email.$dirty && myForm.email.$invalid">Register </button>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- </div> -->
