@@ -14,10 +14,8 @@ const routes: Routes = [
   { path:'', redirectTo: '/home', pathMatch: 'full' },
   { path:'sidebar' , component:SidebarComponent},
   { path:'sports' , component:SportsComponent},
-  {path:'admin', component: AdminComponent},
-  {
-    path:'register', component:RegisterComponent
-  }
+  { path:'admin', component: AdminComponent},
+  { path:'register', component:RegisterComponent }
 ]
 
 @NgModule({
