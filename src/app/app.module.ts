@@ -11,7 +11,10 @@ import { LoginComponent } from './login/login.component';
 import { SportsComponent } from './sports/sports.component';
 import { AdminComponent } from './admin/admin.component';
 import { RegisterComponent } from './register/register.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { UserService } from './services/user.service';
+import { BasicauthhttpinterceptorService } from './services/basicauthhttpinterceptor.service';
+import { EventService } from './services/event.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,11 @@ import { HttpClientModule } from '@angular/common/http';
     //   component: HomePageComponent}
     // ])
   ],
-  providers: [],
+  providers: [
+    UserService,
+    EventService,
+    { provide:HTTP_INTERCEPTORS, useClass:BasicauthhttpinterceptorService, multi:true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

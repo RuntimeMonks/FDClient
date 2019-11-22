@@ -1,112 +1,119 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { UserService } from '../services/user.service';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { UserService } from "../services/user.service";
+import { EventService } from "../services/event.service";
+import { event } from "../services/event";
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+  selector: "app-admin",
+  templateUrl: "./admin.component.html",
+  styleUrls: ["./admin.component.css"]
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private router: Router,private Admin: UserService) { }
+  earr = [{}];
+  evt: event = { eventtype: "", name: "", date: "" };
 
-  winList=["Cricket","Chess","Carrom","Badminton"];
-  years=[2017,2018,2019,2020];
+  constructor(
+    private router: Router,
+    private Admin: UserService,
+    private eService: EventService
+  ) {}
+
+  winList = ["Cricket", "Chess", "Carrom", "Badminton"];
+  years = [2017, 2018, 2019, 2020];
 
   ngOnInit() {
+    this.eService.getAllEvents().subscribe((r) => earr = r);
   }
 
-  logout(){
-    //this.authService.logout();
-    this.router.navigateByUrl('/login');
+  logout() {
+    sessionStorage.clear();
+    this.router.navigateByUrl("/login");
   }
 
-  callCreateEvent(){
-    document.getElementById('createEvents').hidden=false;
-    this.reset('deleteEvents')
-    this.reset('manageEvents')
-    this.reset('winnerRecords')
-    this.reset('fixtureEvents')
-    this.reset('winnerRecordsYear')
+  callCreateEvent() {
+    document.getElementById("createEvents").hidden = false;
+    this.reset("deleteEvents");
+    this.reset("manageEvents");
+    this.reset("winnerRecords");
+    this.reset("fixtureEvents");
+    this.reset("winnerRecordsYear");
   }
 
-  callDeleteEvent(){
-    document.getElementById('deleteEvents').hidden=false;
-    this.reset('createEvents')
-    this.reset('manageEvents')
-    this.reset('winnerRecords')
-    this.reset('fixtureEvents')
-    this.reset('winnerRecordsYear')
+  callDeleteEvent() {
+    document.getElementById("deleteEvents").hidden = false;
+    this.reset("createEvents");
+    this.reset("manageEvents");
+    this.reset("winnerRecords");
+    this.reset("fixtureEvents");
+    this.reset("winnerRecordsYear");
   }
 
-  manageRegister(){
-    document.getElementById('manageEvents').hidden=false;
-    this.reset('deleteEvents')
-    this.reset('createEvents')
-    this.reset('winnerRecords')
-    this.reset('fixtureEvents')
-    this.reset('winnerRecordsYear')
+  manageRegister() {
+    document.getElementById("manageEvents").hidden = false;
+    this.reset("deleteEvents");
+    this.reset("createEvents");
+    this.reset("winnerRecords");
+    this.reset("fixtureEvents");
+    this.reset("winnerRecordsYear");
   }
 
-  fixMatches(){
-    document.getElementById('fixtureEvents').hidden=false;
-    this.reset('deleteEvents')
-    this.reset('createEvents')
-    this.reset('manageEvents')
-    this.reset('winnerRecords')
-    this.reset('winnerRecordsYear')
+  fixMatches() {
+    document.getElementById("fixtureEvents").hidden = false;
+    this.reset("deleteEvents");
+    this.reset("createEvents");
+    this.reset("manageEvents");
+    this.reset("winnerRecords");
+    this.reset("winnerRecordsYear");
   }
 
-  yearPick(){
-    document.getElementById('winnerRecordsYear').hidden=false;
-    this.reset('deleteEvents')
-    this.reset('createEvents')
-    this.reset('manageEvents')
-    this.reset('fixtureEvents')
-    this.reset('winnerRecords')
+  yearPick() {
+    document.getElementById("winnerRecordsYear").hidden = false;
+    this.reset("deleteEvents");
+    this.reset("createEvents");
+    this.reset("manageEvents");
+    this.reset("fixtureEvents");
+    this.reset("winnerRecords");
   }
 
-  addWinner(){
-    document.getElementById('winnerRecords').hidden=false;
-    this.reset('deleteEvents')
-    this.reset('createEvents')
-    this.reset('manageEvents')
-    this.reset('fixtureEvents')
-    this.reset('winnerRecordsYear')
+  addWinner() {
+    document.getElementById("winnerRecords").hidden = false;
+    this.reset("deleteEvents");
+    this.reset("createEvents");
+    this.reset("manageEvents");
+    this.reset("fixtureEvents");
+    this.reset("winnerRecordsYear");
   }
 
-  reset(disableId){
-    document.getElementById(disableId).hidden=true;
+  reset(disableId) {
+    document.getElementById(disableId).hidden = true;
   }
 
-  createEvent(event){
-    const target = event.target
-    const eventName = target.querySelector('#genEvent').value;
-    const eventType = target.querySelector('#genType').value;
-    const eventDate = target.querySelector('#date').value;
-    this.Admin.getEventDetails(eventName,eventType,eventDate)
+  createEvent(event) {
+    const target = event.target;
+    const eventName = target.querySelector("#genEvent").value;
+    const eventType = target.querySelector("#genType").value;
+    const eventDate = target.querySelector("#date").value;
+    this.Admin.getEventDetails(eventName, eventType, eventDate);
     // console.log(eventName,eventDate)
   }
 
-  deleteEvent(event){
+  deleteEvent(event) {
     event.preventDefault();
-    const target = event.target
-    const eventNameDel = target.querySelector('#delEvent').value;
-    console.log(eventNameDel)
+    const target = event.target;
+    const eventNameDel = target.querySelector("#delEvent").value;
+    console.log(eventNameDel);
     // this.Admin.getEventName(eventName)
   }
 
-  enableRegister(event){
+  enableRegister(event) {
     const target = event.target;
     console.log("enableRegister");
   }
 
-  disableRegister(event){
+  disableRegister(event) {
     const target = event.target;
     console.log("disableRegister");
   }
-
-
-
 }
