@@ -1,0 +1,43 @@
+input.ng-ivalid.ng-touched {
+    border: 1px solid red;
+}
+
+input.ng-valid {
+    background-color: lightgray;
+}
+
+
+/* input.ng-invalid {
+    background-color:pink;
+} */
+
+.container {
+    width: 120vw;
+    margin-left: 20vw;
+    margin-top: 1vh;
+}
+
+.jumbotron {
+    background-color: #F5F3BB;
+}
+
+.alingData {
+    margin-left: 30vw;
+    margin-top: -49vh;
+}
+
+input {
+    width: 300px;
+}
+
+input[radio] {
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
+}
+
+button {
+    margin-top: 4vh;
+    /* margin-left: -23vh; */
+    width: 200px;
+}

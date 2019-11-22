@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SportsComponent } from './sports/sports.component';
 import { AdminComponent } from './admin/admin.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AdminComponent } from './admin/admin.component';
     SidebarComponent,
     LoginComponent,
     SportsComponent,
-    AdminComponent
+    AdminComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

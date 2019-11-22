@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SportsComponent } from './sports/sports.component';
 import { AdminComponent } from './admin/admin.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
@@ -13,8 +14,9 @@ const routes: Routes = [
   { path:'', redirectTo: '/home', pathMatch: 'full' },
   { path:'sidebar' , component:SidebarComponent},
   { path:'sports' , component:SportsComponent},
-  {path:'admin', component: AdminComponent}
-];
+  { path:'admin', component: AdminComponent},
+  { path:'register', component:RegisterComponent }
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
