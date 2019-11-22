@@ -6,6 +6,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SportsComponent } from './sports/sports.component';
 import { AdminComponent } from './admin/admin.component';
 import { RegisterComponent } from './register/register.component';
+import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path:'sidebar' , component:SidebarComponent},
   { path:'sports' , component:SportsComponent},
   { path:'admin', component: AdminComponent},
-  { path:'register', component:RegisterComponent }
+  { path:'register', component:RegisterComponent },
+  { path:'about', component:AboutComponent }
 ]
 
 @NgModule({
