@@ -6,11 +6,13 @@
 } */
 
 #login .container #login-row #login-column #login-box {
-    margin-top: 0px;
-    max-width: 600px;
-    height: 320px;
-    border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
+    position: relative;
+    margin-top: 100px;
+    max-width: 55vw;
+    height: 55vh;
+    border: 10px solid #9C9C9C;
+    border-radius: 30px;
+    background-color: #F5F3BB;
 }
 
 #login .container #login-row #login-column #login-box #login-form {
