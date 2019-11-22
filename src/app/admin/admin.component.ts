@@ -24,12 +24,17 @@ export class AdminComponent implements OnInit {
   years = [2017, 2018, 2019, 2020];
 
   ngOnInit() {
-    this.eService.getAllEvents().subscribe((r) => earr = r);
+    this.eService.getAllEvents().subscribe((e) => this.earr = e);
   }
 
   logout() {
     sessionStorage.clear();
     this.router.navigateByUrl("/login");
+  }
+
+  saveEvent(){
+    this.eService.saveEvent(this.evt).subscribe();
+    this.callCreateEvent();
   }
 
   callCreateEvent() {
