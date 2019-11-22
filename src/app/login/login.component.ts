@@ -1,13 +1,13 @@
 import { Component, OnInit } from "@angular/core";
-import { AuthService } from "../services/auth.service";
 import { NgForm } from "@angular/forms";
+import { UserService } from '../services/user.service';
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
-  constructor(private Auth: AuthService) {}
+  constructor(private Auth: UserService) {}
 
   ngOnInit() {}
   // loginUser(event){

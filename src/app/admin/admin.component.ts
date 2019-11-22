@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AdminService } from '../services/admin.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-admin',
@@ -9,7 +9,7 @@ import { AdminService } from '../services/admin.service';
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private router: Router,private Admin: AdminService) { }
+  constructor(private router: Router,private Admin: UserService) { }
 
   winList=["Cricket","Chess","Carrom","Badminton"];
   years=[2017,2018,2019,2020];
