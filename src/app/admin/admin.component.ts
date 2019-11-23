@@ -10,21 +10,18 @@ import { event } from "../services/event";
   styleUrls: ["./admin.component.css"]
 })
 export class AdminComponent implements OnInit {
-
-  earr = [{}];
-  evt: event = { eventtype: "", name: "", date: "" };
-
+  eArr = [{}];
+  evt: event = { eventtype: "", ename: "", date: "" };
+  selectedevent:String= "";
   constructor(
     private router: Router,
     private Admin: UserService,
     private eService: EventService
   ) {}
 
-  winList = ["Cricket", "Chess", "Carrom", "Badminton"];
-  years = [2017, 2018, 2019, 2020];
 
   ngOnInit() {
-    this.eService.getAllEvents().subscribe((e) => this.earr = e);
+    this.eService.getAllEvents().subscribe(r => (this.eArr = r));
   }
 
   logout() {
@@ -32,9 +29,11 @@ export class AdminComponent implements OnInit {
     this.router.navigateByUrl("/login");
   }
 
-  saveEvent(){
-    this.eService.saveEvent(this.evt).subscribe();
-    this.callCreateEvent();
+  removeEvent() {
+    console.log("in delete function ts")
+    this.eService.removeEvents(this.selectedevent).subscribe();
+    this.ngOnInit();
+    this.resetAll();
   }
 
   callCreateEvent() {
@@ -44,6 +43,13 @@ export class AdminComponent implements OnInit {
     this.reset("winnerRecords");
     this.reset("fixtureEvents");
     this.reset("winnerRecordsYear");
+  }
+
+  saveEvent() {
+    console.log(this.evt);
+    this.eService.saveEvent(this.evt).subscribe();
+    this.ngOnInit();
+    this.resetAll();
   }
 
   callDeleteEvent() {
@@ -87,6 +93,15 @@ export class AdminComponent implements OnInit {
     this.reset("deleteEvents");
     this.reset("createEvents");
     this.reset("manageEvents");
+    this.reset("fixtureEvents");
+    this.reset("winnerRecordsYear");
+  }
+
+  resetAll() {
+    this.reset("createEvents");
+    this.reset("deleteEvents");
+    this.reset("manageEvents");
+    this.reset("winnerRecords");
     this.reset("fixtureEvents");
     this.reset("winnerRecordsYear");
   }

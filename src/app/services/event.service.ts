@@ -12,12 +12,17 @@ export class EventService {
 
   getAllEvents():Observable<event[]> {
     console.log("In event list type method");
-    return this.http.get<event[]>(this.url + "/list");
+    return this.http.get<event[]>(this.url);
   }
 
   saveEvent(e:event){
     console.log("In Register event method", e);
-    return this.http.post(this.url , e);
+    return this.http.post<event[]>(this.url , e);
+  }
+
+  removeEvents(selectedevent){
+    console.log("In delete event method");
+    return this.http.delete(this.url+"?id="+selectedevent);
   }
 
 }

@@ -1,5 +1,5 @@
 export class event {
     eventtype;
-    name;
+    ename;
     date;
 }
