@@ -15,8 +15,7 @@ export class AdminComponent implements OnInit {
   evt: event = { eventtype: "", ename: "", date: "" };
   selectedevent:String= "";
 
-  toppings = new FormControl();
-  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+  
 
   constructor(
     private router: Router,

@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
-  u: user = { name: "", email: "", eid: "", gender: "", password: "" };
+  u: user = { name: "", email: "", eid: "", gender: "", password: "",utype:"",event:""};
   valid_user: any;
 
   constructor(private Auth: UserService,private routes: Router) {}
@@ -26,12 +26,12 @@ export class LoginComponent implements OnInit {
       else
       {
         console.log(this.u.email)
-        // if (this.u.userType==="admin") {
-        //   this.routes.navigate(['/admin']);  
-        // } else {
-        //   this.routes.navigate(['/admin']); 
-        // }
-        this.routes.navigate(['/admin']); 
+        if (this.u.utype==="admin") {
+          this.routes.navigate(['/admin']);  
+        } else {
+          this.routes.navigate(['/admin']); 
+        }
+        // this.routes.navigate(['/admin']); 
       }
     }
  }

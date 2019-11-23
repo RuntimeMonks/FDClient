@@ -4,4 +4,6 @@ export class user {
     eid;
     gender;
     password;
+    utype;
+    event;
 }

@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
   // public form: FormGroup;
   // regdata = {};
 
-  u: user = { name: "", email: "", eid: "", gender: "", password: "" };
+  u: user = { name: "", email: "", eid: "", gender: "", password: "",utype:"",event:""};
   cpwd: String = "";
 
   constructor(private rServises: UserService, private routes: Router) {}

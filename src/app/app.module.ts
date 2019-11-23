@@ -18,6 +18,7 @@ import { BasicauthhttpinterceptorService } from './services/basicauthhttpinterce
 import { EventService } from './services/event.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatSelectModule } from '@angular/material/select';
     SportsComponent,
     AdminComponent,
     RegisterComponent,
-    AboutComponent
+    AboutComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
