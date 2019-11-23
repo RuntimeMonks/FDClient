@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { UserService } from "../services/user.service";
 import { EventService } from "../services/event.service";
 import { event } from "../services/event";
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: "app-admin",
@@ -13,6 +14,10 @@ export class AdminComponent implements OnInit {
   eArr = [{}];
   evt: event = { eventtype: "", ename: "", date: "" };
   selectedevent:String= "";
+
+  toppings = new FormControl();
+  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+
   constructor(
     private router: Router,
     private Admin: UserService,

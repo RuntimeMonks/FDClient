@@ -15,6 +15,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserService } from './services/user.service';
 import { BasicauthhttpinterceptorService } from './services/basicauthhttpinterceptor.service';
 import { EventService } from './services/event.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { EventService } from './services/event.service';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule ,
+    MatSelectModule,
     // RouterModule.forRoot([
     //   {
     //     path:'',
