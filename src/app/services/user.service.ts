@@ -33,7 +33,7 @@ export class UserService {
           sessionStorage.setItem("basicauth", authString);
           console.log("userdata" + userData);
           return userData;
-        }),((res : Response)=>{return res.json();})
+        })
       ));
   }
 
