@@ -1,5 +1,8 @@
 
-
+body
+{ background:url(../../assets/images/img1.jpg) no-repeat;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
 
   
 #feedback-page{

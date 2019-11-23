@@ -11,7 +11,7 @@ export class FeedbackService {
   
 { }
 savefeedback(u: feedback) {
-  console.log("In Register User method", u);
-  return this.http.post(this.url + "/signup", u);
+  console.log("In  method", u);
+  return this.http.post(this.url + "/feedback", u);
 }
 }

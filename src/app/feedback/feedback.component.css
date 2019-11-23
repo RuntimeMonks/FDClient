@@ -1,6 +1,10 @@
 
 
 /*General */
+body
+{ background:url('../../assets/images/logo.png') no-repeat;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
 
   
   #feedback-page{
@@ -56,7 +60,7 @@
   
   /* Icons ---------------------------------- */
   .fdform  #name{
-      background-image: url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-address-book.svg);
+       background-image: url(../../assets/images/icon1.svg); 
       background-size:30px 30px;
       background-position: 10px 8px;
       background-repeat: no-repeat;
@@ -85,7 +89,7 @@
   }
   
   .fdform  #comment{
-      background-image: url('../../assets/images/icon1.svg');
+      background-image: url('../../assets/images/icon3.svg');
       background-size: 30px 30px;
       background-position: 11px 8px;
       background-repeat: no-repeat;
