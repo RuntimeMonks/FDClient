@@ -1,0 +1,14 @@
+<div>
+    <app-sidebar></app-sidebar>
+</div>
+<span (click)="logout()"><button id="btnLog" class="btn btn-danger" routerLink='/login'>Logout</button></span>
+
+<div>
+    <mat-form-field>
+        <mat-label>Select Event</mat-label>
+        <mat-select [formControl]="eventData1" multiple>
+            <mat-option *ngFor="let e of eArr" [value]="eventData">{{e.ename}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button type="submit" (click)="selectedData()">submit</button>
+</div>

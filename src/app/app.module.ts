@@ -11,6 +11,13 @@ import { LoginComponent } from './login/login.component';
 import { SportsComponent } from './sports/sports.component';
 import { AdminComponent } from './admin/admin.component';
 import { RegisterComponent } from './register/register.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { UserService } from './services/user.service';
+import { BasicauthhttpinterceptorService } from './services/basicauthhttpinterceptor.service';
+import { EventService } from './services/event.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +27,18 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     SportsComponent,
     AdminComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule ,
+    MatSelectModule,
     // RouterModule.forRoot([
     //   {
     //     path:'',
@@ -38,7 +49,11 @@ import { RegisterComponent } from './register/register.component';
     //   component: HomePageComponent}
     // ])
   ],
-  providers: [],
+  providers: [
+    UserService,
+    EventService,
+    { provide:HTTP_INTERCEPTORS, useClass:BasicauthhttpinterceptorService, multi:true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
