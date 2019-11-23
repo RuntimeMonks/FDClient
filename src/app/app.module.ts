@@ -12,6 +12,12 @@ import { SportsComponent } from './sports/sports.component';
 import { AdminComponent } from './admin/admin.component';
 import { RegisterComponent } from './register/register.component';
 import { AboutComponent } from './about/about.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { UserService } from './services/user.service';
+import { BasicauthhttpinterceptorService } from './services/basicauthhttpinterceptor.service';
+import { EventService } from './services/event.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,10 @@ import { AboutComponent } from './about/about.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule ,
+    MatSelectModule,
     // RouterModule.forRoot([
     //   {
     //     path:'',
@@ -40,7 +49,11 @@ import { AboutComponent } from './about/about.component';
     //   component: HomePageComponent}
     // ])
   ],
-  providers: [],
+  providers: [
+    UserService,
+    EventService,
+    { provide:HTTP_INTERCEPTORS, useClass:BasicauthhttpinterceptorService, multi:true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
