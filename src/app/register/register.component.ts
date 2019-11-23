@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { NgForm } from "@angular/forms";
-import { FormGroup } from "@angular/forms";
+// import { FormGroup } from "@angular/forms";
 import { Router } from "@angular/router";
 import { UserService } from "../services/user.service";
 import { user } from "../services/user";
@@ -14,14 +14,20 @@ export class RegisterComponent implements OnInit {
   // public form: FormGroup;
   // regdata = {};
 
+
+
   u: user = { name: "", email: "", eid: "", gender: "", password: "" };
   cpwd: String = "";
 
   constructor(private rServises: UserService, private routes: Router) {}
 
-  ngOnInit() {}
-
+  ngOnInit() {
+    
+  }
+ 
   register() {
+    
+  	
     console.log("beforeservice", this.u);
     if (this.u.password !== this.cpwd) {
       document.getElementById("passMatch").innerHTML +=

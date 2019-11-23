@@ -57,18 +57,18 @@
   /* Icons ---------------------------------- */
   .fdform  #name{
       background-image: url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-address-book.svg);
-      background-size: 30px 30px;
-      background-position: 11px 8px;
+      background-size:30px 30px;
+      background-position: 10px 8px;
       background-repeat: no-repeat;
   }
   
-  .fdform  #name:focus{
+  /* .fdform  #name:focus{
       background-image: url(../../assets/images/icon2.svg);
       background-size: 30px 30px;
       background-position: 8px 5px;
     background-position: 11px 8px;
       background-repeat: no-repeat;
-  }
+  } */
   
   .fdform  #email{
       background-image: url(../../assets/images/icon3.svg);
@@ -121,19 +121,19 @@
   
   .button-blue:hover{
       background-color: rgba(0,0,0,0);
-      color: #0493bd;
+      color: lightskyblue;
   }
       
-  .fdform  .submit:hover {
-      color: #3498db;
+ .fdform  .submit:hover {
+      color:lightgreen;
   }
       
-  .ease {
+   .ease {
       width: 0px;
       height: 74px;
       background-color: #fbfbfb;
       transition: .3s ease;
-  }
+  } 
   
   .submit:hover .ease{
     width:100%;

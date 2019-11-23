@@ -1,3 +1,6 @@
+<div>
+        <app-sidebar></app-sidebar>
+    </div>
 <div class="container">
     <div id="form-main">
         <div id="form-div">
@@ -12,7 +15,7 @@
                     <textarea name="message"  maxlength="10" class="feedback-input" id="comment" placeholder="Message"></textarea>
                 </p>
                 <div class="submit">
-                    <button type="submit" class="button-blue">SUBMIT</button>
+                    <button type="submit" class="button-blue" (click)="feedbackdata()">SUBMIT</button>
                     <div class="ease"></div>
                 </div>
             </form>
