@@ -14,12 +14,11 @@ const routes: Routes = [
   { path:'login' ,children:[
   {path:'' , component:LoginComponent},
   {path:'user', component:UserComponent},
-  { path:'admin', component: AdminComponent}
 ]},
   { path:'', redirectTo: '/home', pathMatch: 'full' },
   { path:'sidebar' , component:SidebarComponent},
   { path:'sports' , component:SportsComponent},
-  
+  { path:'admin', component: AdminComponent},
   { path:'register', component:RegisterComponent }
 ]
 

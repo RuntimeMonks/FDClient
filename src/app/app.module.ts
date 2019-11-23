@@ -16,6 +16,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserService } from './services/user.service';
 import { BasicauthhttpinterceptorService } from './services/basicauthhttpinterceptor.service';
 import { EventService } from './services/event.service';
+import { CulturalComponent } from './cultural/cultural.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EventService } from './services/event.service';
     UserComponent,
     SportsComponent,
     AdminComponent,
-    RegisterComponent
+    RegisterComponent,
+    CulturalComponent
   ],
   imports: [
     BrowserModule,
