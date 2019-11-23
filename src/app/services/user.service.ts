@@ -27,14 +27,14 @@ export class UserService {
         { headers }
       )
       .pipe(
-        map(userData => {
+        map((userData => {
           sessionStorage.setItem("email", u.email);
           let authString = "Basic " + btoa(u.email + ":" + u.password);
           sessionStorage.setItem("basicauth", authString);
           console.log("userdata" + userData);
           return userData;
-        })
-      );
+        }),((res : Response)=>{return res.json();})
+      ));
   }
 
 

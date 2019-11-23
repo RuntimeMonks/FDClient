@@ -17,15 +17,8 @@ export class UserComponent implements OnInit {
   u: user = { name: "", email: "", eid: "", gender: "", password: "",utype:"",event:""};
 
   //temprory data
-  toppings = new FormControl();
-  toppingList: string[] = [
-    "Extra cheese",
-    "Mushroom",
-    "Onion",
-    "Pepperoni",
-    "Sausage",
-    "Tomato"
-  ];
+  eventData="";
+  eventData1 = new FormControl();
 
   constructor(
     private router: Router,
@@ -34,11 +27,16 @@ export class UserComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.eService.getAllEvents().subscribe(r => (this.eArr = r));
+    this.eService.getAllEvents().subscribe(r => {(this.eArr = r);console.log(this.eArr);});
+  }
+  selectedData(){
+    console.log(this.eventData)
   }
 
   logout() {
-    sessionStorage.clear();
+    sessionStorage.removeItem("email");
+    sessionStorage.removeItem("basicauth");
+    sessionStorage.removeItem("utype");
     this.router.navigateByUrl("/login");
   }
 }
