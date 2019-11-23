@@ -1,0 +1,32 @@
+img {
+    height: 50vh;
+    width: 50vw;
+}
+
+.btn-primary {
+    position: relative;
+    margin-top: 60px;
+    margin-left: 200px;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.notification {
+    position: relative;
+    height: 70vh;
+    width: 25vw;
+    border: 2px;
+    background-color: black;
+    margin-top: 35px;
+    margin-left: 40px;
+    padding: 10px;
+}
+
+.col-md-1-8 {
+    position: relative;
+    margin-left: 20.5vw;
+    margin-top: 6vh;
+    height: 50vh;
+    width: 50vw;
+}

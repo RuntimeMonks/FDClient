@@ -1,0 +1,173 @@
+/* #sidebar-wrapper {
+    position: relative;
+    height: 76vh;
+    /* padding: 0.875rem 1.25rem; */
+
+
+/* font-size: 1.2rem;
+
+}
+#sidebar-wrapper .list-group {
+    width: 18rem;
+}
+*/
+
+
+/* @media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+} */
+
+.sidenav {
+    height: 100%;
+    width: 17vw;
+    position: fixed;
+    background-color: #86BA90;
+    /* background-color: #231e25; */
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+}
+
+span {
+    padding: 6px;
+}
+
+.sidenav a {
+    text-align: left;
+    font-size: 2.5vh;
+    color: #412722;
+    display: block;
+    margin-top: 0px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+}
+
+.sidenav li {
+    list-style: none;
+}
+
+#span-home {
+    padding-left: 2px;
+    font-weight: 400;
+}
+
+div.div-home {
+    padding-bottom: 45px;
+    margin-left: -20px;
+    padding-top: 1px;
+}
+
+#span-about {
+    font-weight: 400;
+}
+
+div.div-about {
+    padding-bottom: 50px;
+    margin-left: -20px;
+}
+
+#span-events {
+    font-weight: 400;
+}
+
+div.div-events {
+    padding-bottom: 50px;
+    margin-left: -20px;
+}
+
+#span-sports {
+    font-weight: 400;
+}
+
+div.div-sports {
+    padding-bottom: 50px;
+    margin-left: -20px;
+}
+
+#span-cultural {
+    font-weight: 400;
+}
+
+div.div-cultural {
+    padding-bottom: 50px;
+    margin-left: -18px;
+}
+
+#span-fixtures {
+    font-weight: 400;
+}
+
+div.div-fixtures {
+    padding-bottom: 50px;
+    margin-left: -20px;
+}
+
+#span-feedback {
+    font-weight: 400;
+}
+
+div.div-feedback {
+    padding-bottom: 50px;
+    margin-left: -20px;
+}
+
+.div-topbar {
+    width: 100%;
+    height: 15vh;
+    background-color: #86BA90;
+    text-align: justify;
+}
+
+i.fa.fa-arrow-circle-left {
+    margin-left: 190px;
+    margin-top: 2px;
+}
+
+div.div-navicon {
+    margin-top: -36px;
+    padding-bottom: 30px;
+}
+
+.div-small-bar {
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    background-color: #231e25;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+}
+
+#i-smallbar {
+    margin: 0%;
+    margin-top: -10px;
+    padding-left: 18px;
+}
+
+#headTile {
+    position: absolute;
+    margin-left: 40vh;
+    margin-top: -115px;
+    /* z-index: 1; */
+    font-family: sans-serif;
+    font-size: 5.5vw;
+    color: #412722;
+    /* border: #231e25; */
+    border-radius: 5px;
+}
+
+#btnLog {
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    width: 6vw;
+}

@@ -1,25 +1,44 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import { RouterModule } from '@angular/router'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { SportsComponent } from './sports/sports.component';
+import { AdminComponent } from './admin/admin.component';
 import { RegisterComponent } from './register/register.component';
-import { from } from 'rxjs';
-import{RegserviceService} from './regservice.service';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomePageComponent,
+    SidebarComponent,
+    LoginComponent,
+    SportsComponent,
+    AdminComponent,
     RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
     FormsModule,
-    HttpClientModule
+    ReactiveFormsModule
+    // RouterModule.forRoot([
+    //   {
+    //     path:'',
+    //     redirectTo: '/home',
+    //     pathMatch: 'full'
+    //   },
+    //   {path: 'home',
+    //   component: HomePageComponent}
+    // ])
   ],
-  providers: [RegserviceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

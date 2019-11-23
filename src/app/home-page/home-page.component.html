@@ -1,0 +1,44 @@
+<div>
+    <app-sidebar></app-sidebar>
+</div>
+<div class="row">
+    <div class="col-md-1-8">
+        <ngb-carousel>
+            <ng-template ngbSlide>
+                <img src="../../assets/images/img1.jpg" alt="Paris" height="">
+                <div class="carousel-caption">
+                    <h4 style="color: yellow">Paris</h4>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <img src="../../assets/images/img3.jpg" alt="sunset">
+                <div class="carousel-caption">
+                    <h4 style="color: yellow">sunset</h4>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <img src="../../assets/images/img3.jpg" alt="River view">
+                <div class="carousel-caption">
+                    <h4 style="color: yellow">River view</h4>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <img src="../../assets/images/img4.jpg" alt="sunflowers">
+                <div class="carousel-caption">
+                    <h4 style="color: yellow">sunflowers</h4>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <img src="../../assets/images/img5.jpg" alt="boats">
+                <div class="carousel-caption">
+                    <h4 style="color: yellow">boats</h4>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+        <button id="btnReg" class="btn-primary" (click)="register()"><i class="fa fa-plus"></i> Register</button>
+    </div>
+    <div class="col-md-1-4">
+        <div class="notification">
+        </div>
+    </div>
+</div>
