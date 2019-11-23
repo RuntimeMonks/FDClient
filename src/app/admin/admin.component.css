@@ -1,0 +1,49 @@
+.navbar {
+    margin-left: 16.85vw;
+    margin-top: -4vh;
+}
+
+.row {
+    margin-left: 20vw;
+    margin-top: 5vh;
+    width: 600px;
+}
+
+.btn {
+    width: 100px;
+}
+
+.btnED {
+    width: 200px;
+    padding: 10px;
+    margin: 40px;
+}
+
+#genType {
+    color: #58355E;
+}
+
+#winLists {
+    width: 10vw;
+    position: relative;
+    padding: 10px;
+}
+
+.next {
+    width: 100px;
+    margin: 20px;
+    padding: 6px 15px;
+    border-radius: 5px;
+}
+
+#lister {
+    width: 150px;
+    padding: 5px;
+}
+
+#btnLog {
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    width: 6vw;
+}

@@ -23,7 +23,7 @@ export class HomePageComponent implements OnInit {
   register(){
     console.log("Hello")
     this.showHome=false;
-    this.route.navigate(['/login']);
+    this.route.navigate(['/register']);
   }
 
 }
