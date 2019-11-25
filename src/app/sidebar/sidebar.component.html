@@ -4,7 +4,7 @@
 <div class="div-topbar">
 </div>
 <span id="headTile">FD Manager</span>
-<span (click)="login()"><button id="btnLog" class="btn btn-primary" routerLink='/login'>Login</button></span>
+<span *ngIf="logButton"><button id="btnLog" class="btn btn-primary" (click)="login()">Login</button></span>
 <div class="sidenav" *ngIf='showsidebar'>
     <div class="div-logo">
         <a routerLink="/home" routerLinkActive="active"></a>
