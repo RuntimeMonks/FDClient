@@ -23,7 +23,7 @@ input.ng-valid {
 
 .alingData {
     margin-left: 30vw;
-    margin-top: -49vh;
+    margin-top: -47vh;
 }
 
 input {
@@ -40,4 +40,16 @@ button {
     margin-top: 4vh;
     /* margin-left: -23vh; */
     width: 200px;
+}
+
+#gendermale {
+    position: relative;
+    left: 10vw;
+    margin-left: -35vh;
+}
+
+#genderfemale {
+    position: relative;
+    left: 10vw;
+    margin-left: -35vh;
 }

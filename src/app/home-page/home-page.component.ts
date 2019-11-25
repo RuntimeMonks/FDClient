@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class HomePageComponent implements OnInit {
   // constructor(){}
   showHome:boolean=true;
+  
   constructor(private route:Router,config: NgbCarouselConfig) {  
     config.interval = 2000;  
     config.wrap = true;  
@@ -25,5 +26,7 @@ export class HomePageComponent implements OnInit {
     this.showHome=false;
     this.route.navigate(['/register']);
   }
+
+  
 
 }
