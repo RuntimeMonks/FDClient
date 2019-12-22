@@ -25,7 +25,8 @@ export class AdminComponent implements OnInit {
 
 
   ngOnInit() {
-    this.eService.getAllEvents().subscribe(r => (this.eArr = r));
+    let context =this;
+    this.eService.getAllEvents().subscribe(r => (context.eArr = r));
   }
 
   logout() {
@@ -35,7 +36,7 @@ export class AdminComponent implements OnInit {
   }
 
   removeEvent() {
-    console.log("in delete function ts")
+    console.log("in delete function ts",this.eArr);
     this.eService.removeEvents(this.selectedevent).subscribe();
     this.ngOnInit();
     this.resetAll();

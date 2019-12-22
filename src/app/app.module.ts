@@ -1,36 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
-import { SportsComponent } from './sports/sports.component';
-import { AdminComponent } from './admin/admin.component';
-import { RegisterComponent } from './register/register.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserService } from './services/user.service';
 import { BasicauthhttpinterceptorService } from './services/basicauthhttpinterceptor.service';
 import { EventService } from './services/event.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
-import { UserComponent } from './user/user.component';
-import { CulturalComponent } from './cultural/cultural.component';
+import { SidebarModule } from './sidebar/sidebar.module';
+import { AdminModule } from './admin/admin.module';
+import { AboutModule } from './about/about.module';
+import { HomePageModule } from './home-page/home-page.module';
+import { LoginModule } from './login/login.module';
+import { RegisterModule } from './register/register.module';
+import { UserModule } from './user/user.module';
+import { SportsModule } from './sports/sports.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomePageComponent,
-    SidebarComponent,
-    LoginComponent,
-    SportsComponent,
-    AdminComponent,
-    RegisterComponent,
-    UserComponent,
-    CulturalComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -39,8 +30,16 @@ import { CulturalComponent } from './cultural/cultural.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule ,
+    BrowserAnimationsModule,
     MatSelectModule,
+    SidebarModule,
+    AdminModule,
+    AboutModule,
+    HomePageModule,
+    LoginModule,
+    RegisterModule,
+    UserModule,
+    SportsModule
     // RouterModule.forRoot([
     //   {
     //     path:'',
