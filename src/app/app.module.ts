@@ -18,6 +18,7 @@ import { EventService } from './services/event.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { UserComponent } from './user/user.component';
+import { CulturalComponent } from './cultural/cultural.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UserComponent } from './user/user.component';
     SportsComponent,
     AdminComponent,
     RegisterComponent,
-    UserComponent
+    UserComponent,
+    CulturalComponent
   ],
   imports: [
     BrowserModule,

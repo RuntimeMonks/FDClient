@@ -1,4 +1,4 @@
-import { Component, OnInit} from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { UserService } from "../services/user.service";
 import { user } from "../services/user";
@@ -21,31 +21,54 @@ export class LoginComponent implements OnInit {
   valid_user: any;
   data: any;
 
-  constructor(private Auth: UserService, private routes: Router) {}
+  constructor(private Auth: UserService, private routes: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   loginUser() {
+    let context = this;
     this.Auth.UsersValidate(this.u).subscribe(
       res => {
-        this.valid_user = res;
-        console.log("response: ", res.utype);
-        return res
+        context.valid_user = res;
+        console.log("response", res)
+        console.log("valid user0", context.valid_user)
+        this.createSession(context.valid_user);
       },
       err => console.log(err)
     );
     {
-      if (this.valid_user) {
-        this.routes.navigate(["/home"]);
+      // console.log("valid user", this.valid_user)
+      // if (this.valid_user) {
+      //   this.routes.navigate(["/home"]);
+      // } else {
+      //   console.log("valid user in", this.valid_user)
+      //   if (this.valid_user === "admin") {
+      //     this.routes.navigate(["/admin"]);
+      //   } else if (this.valid_user === "user") {
+      //     this.routes.navigate(["/user"]);
+      // }else{
+      //   this.routes.navigate(["/home"]);
+      // }
+      // }
+    }
+    console.log("valid user1", this.valid_user)
+    if (!this.valid_user) {
+      // this.routes.navigate(["/home"]);
+    } else {
+      if (this.valid_user.utype === "admin") {
+        this.routes.navigate(["/admin"]);
+      } else if (this.valid_user.utype === "user") {
+        this.routes.navigate(["/user"]);
       } else {
-        console.log("data",this.data)
-        if (this.data === "admin") {
-          this.routes.navigate(["/admin"]);
-        } else {
-          this.routes.navigate(["/user"]);
-        }
-        // this.routes.navigate(['/admin']);
+        this.routes.navigate(["/home"]);
       }
     }
+  }
+
+  createSession(data) {
+    console.log("valid data", data)
+    sessionStorage.setItem("email", data.email);
+    sessionStorage.setItem("token", data.token);
+    this.valid_user = data;
   }
 }

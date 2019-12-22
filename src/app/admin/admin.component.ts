@@ -30,8 +30,7 @@ export class AdminComponent implements OnInit {
 
   logout() {
     sessionStorage.removeItem("email");
-    sessionStorage.removeItem("basicauth");
-    sessionStorage.removeItem("utype");
+    sessionStorage.removeItem("token");
     this.router.navigateByUrl("/login");
   }
 

@@ -16,10 +16,10 @@
         </thead>
         <tbody>
             <tr *ngFor="let item of eventArray">
-                <td *ngIf="item.eventtype=='sport'">
+                <td *ngIf="item.eventtype=='cultural'">
                     {{item.ename}}
                 </td>
-                <td *ngIf="item.eventtype=='sport'">
+                <td *ngIf="item.eventtype=='cultural'">
                     {{item.date|date}}
                 </td>
             </tr>

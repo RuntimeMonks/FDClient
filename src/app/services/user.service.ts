@@ -8,6 +8,7 @@ import { map } from "rxjs/operators";
 })
 export class UserService {
   url = "http://localhost:3000";
+  data:any;
 
   constructor(private http: HttpClient) {}
 
@@ -16,25 +17,32 @@ export class UserService {
     const headers = new HttpHeaders({
       Authorization: "Basic" + btoa(u.email + ":" + u.password)
     });
-    return this.http
-      .get<any>(
-        this.url +
-          "/login?email=" +
-          u.email +
-          "&" +
-          "password=" +
-          u.password,
-        { headers }
-      )
-      .pipe(
-        map((userData => {
-          sessionStorage.setItem("email", u.email);
-          let authString = "Basic " + btoa(u.email + ":" + u.password);
-          sessionStorage.setItem("basicauth", authString);
-          console.log("userdata" + userData);
-          return userData;
-        }),((res : Response)=>{return res.json();})
-      ));
+    // return this.http
+    //   .get<any>(
+        // this.url +
+        //   "/login?email=" +
+        //   u.email +
+        //   "&" +
+        //   "password=" +
+        //   u.password,
+        // { headers }
+    //   )
+    //   .pipe(
+    //     map((userData => {
+          // sessionStorage.setItem("email", u.email);
+          // let authString = "Basic " + btoa(u.email + ":" + u.password);
+          // sessionStorage.setItem("basicauth", authString);
+    //       console.log("userdata" + userData);
+    //       return userData;
+    //     }),((res : Response)=>{return res.json();})
+    //   ));
+    return this.http.get<any>(this.url+
+      "/login?email=" +
+      u.email +
+      "&" +
+      "password=" +
+      u.password,
+    { headers })
   }
 
 
