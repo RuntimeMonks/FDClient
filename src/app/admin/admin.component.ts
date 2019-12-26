@@ -33,6 +33,7 @@ export class AdminComponent implements OnInit {
     sessionStorage.removeItem("email");
     sessionStorage.removeItem("token");
     this.router.navigateByUrl("/login");
+    // this.router.navigate(["/login"]);
   }
 
   removeEvent() {

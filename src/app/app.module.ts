@@ -18,6 +18,7 @@ import { LoginModule } from './login/login.module';
 import { RegisterModule } from './register/register.module';
 import { UserModule } from './user/user.module';
 import { SportsModule } from './sports/sports.module';
+import { CulturalModule } from './cultural/cultural.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SportsModule } from './sports/sports.module';
     LoginModule,
     RegisterModule,
     UserModule,
-    SportsModule
+    SportsModule,
+    CulturalModule
     // RouterModule.forRoot([
     //   {
     //     path:'',
